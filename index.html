@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>emaoso — Emanuel Osorio, diseño visual &amp; dirección creativa</title>
+<meta name="description" content="Portafolio de Emanuel Osorio (emaoso): diseño visual, dirección creativa, UI/UX y desarrollo web desde Cali, Colombia.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#principal">Saltar al contenido</a>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="row-preview" id="rowPreview" aria-hidden="true"><span id="rowPreviewLabel">Ver</span></div>
+
+<header class="chrome-top">
+  <a class="brand" href="#top" aria-label="emaoso, inicio">
+    <img src="assets/emaoso-mark.png" alt="" class="brand-mark">
+    <span>emaoso</span>
+  </a>
+
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+    <span></span><span></span><span></span>
+    <span class="sr-only">Abrir menú</span>
+  </button>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="#trabajo">Trabajo<sup>01</sup></a>
+    <a href="#sobre-mi">Sobre mí<sup>02</sup></a>
+    <a href="#servicios">Servicios<sup>03</sup></a>
+    <a href="#contacto">Contacto<sup>04</sup></a>
+  </nav>
+</header>
+
+<main id="principal">
+
+  <section class="hero" id="top">
+    <h1 class="hero-title" aria-label="Ema Oso">
+      <span class="word">Ema</span>
+      <span class="word accent">Oso</span>
+    </h1>
+
+    <p class="hero-copy">
+      Soy Emanuel Osorio. Diseñador visual y director creativo del área
+      creativa de la Iglesia del Nazareno Cali. También diseño y desarrollo
+      sitios web por mi cuenta.
+    </p>
+
+    <div class="chrome-bottom">
+      <p class="clock">
+        <span>Hora local — Cali</span>
+        <time id="localTime">--:--</time>
+      </p>
+      <p class="status">
+        <span class="dot" aria-hidden="true"></span>
+        Disponible para proyectos freelance
+      </p>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Diseño — Dirección creativa — UI/UX — Desarrollo web — Diseño — Dirección creativa — UI/UX — Desarrollo web — </span>
+      <span>Diseño — Dirección creativa — UI/UX — Desarrollo web — Diseño — Dirección creativa — UI/UX — Desarrollo web — </span>
+    </div>
+  </div>
+
+  <section class="trabajo" id="trabajo">
+    <div class="section-head wrap">
+      <h2>Trabajo seleccionado</h2>
+      <ul class="filtros" id="filtros">
+        <li><button class="filtro-btn is-active" data-filtro="todo">Todo</button></li>
+        <li><button class="filtro-btn" data-filtro="marca">Marca</button></li>
+        <li><button class="filtro-btn" data-filtro="web">Web</button></li>
+        <li><button class="filtro-btn" data-filtro="producto">Producto</button></li>
+      </ul>
+    </div>
+
+    <ul class="trabajo-list wrap" id="trabajoList">
+      <li class="trabajo-row" data-cat="web" data-color="#d4860f">
+        <span class="row-index">01</span>
+        <span class="row-title">Iglesia del Nazareno Cali — Renovación web</span>
+        <span class="row-cat">Web</span>
+        <span class="row-year">2026</span>
+      </li>
+      <li class="trabajo-row" data-cat="producto" data-color="#7c5cff">
+        <span class="row-index">02</span>
+        <span class="row-title">Iglesia del Nazareno Cali — Panel Ruta Creativa</span>
+        <span class="row-cat">Producto</span>
+        <span class="row-year">2026</span>
+      </li>
+      <li class="trabajo-row" data-cat="web" data-color="#2fae6e">
+        <span class="row-index">03</span>
+        <span class="row-title">RedCREA — UNICAMACHO</span>
+        <span class="row-cat">Web</span>
+        <span class="row-year">2026</span>
+      </li>
+      <li class="trabajo-row" data-cat="producto" data-color="#d4860f">
+        <span class="row-index">04</span>
+        <span class="row-title">miEco — App de finanzas personales</span>
+        <span class="row-cat">Producto</span>
+        <span class="row-year">2026</span>
+      </li>
+      <li class="trabajo-row" data-cat="marca" data-color="#e23d3d">
+        <span class="row-index">05</span>
+        <span class="row-title">Yawa — Festival de Diseño del Pacífico</span>
+        <span class="row-cat">Marca</span>
+        <span class="row-year">2024</span>
+      </li>
+      <li class="trabajo-row" data-cat="marca" data-color="#2d6fd4">
+        <span class="row-index">06</span>
+        <span class="row-title">La Agencia UAO — Diseño gráfico</span>
+        <span class="row-cat">Marca</span>
+        <span class="row-year">2025</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sobre-mi" id="sobre-mi">
+    <div class="wrap">
+      <p class="pull-quote">
+        Diseño con la misma atención al detalle sin importar el formato:
+        marca, interfaz o un sitio construido desde cero.
+      </p>
+      <p class="sobre-texto">
+        Soy diseñador visual y dirijo el área creativa de la Iglesia del
+        Nazareno Cali. En paralelo diseño y desarrollo sitios web por mi
+        cuenta, y he trabajado en el lanzamiento de Yawa — Centro de
+        Ciencias, Arte y Tecnología — y en La Agencia UAO, la agencia de
+        publicidad de la Universidad Autónoma de Occidente. emaoso reúne
+        ese trabajo bajo un mismo nombre.
+      </p>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="wrap">
+      <h2>En qué puedo ayudarte</h2>
+      <ul class="servicios-list">
+        <li>
+          <h3>Dirección creativa</h3>
+          <p>Lineamiento visual y acompañamiento de proyectos de principio a fin.</p>
+        </li>
+        <li>
+          <h3>Identidad de marca</h3>
+          <p>Sistemas gráficos y aplicaciones para instituciones y proyectos propios.</p>
+        </li>
+        <li>
+          <h3>Diseño UI / UX</h3>
+          <p>Interfaces para sitios web y apps, del wireframe a la entrega.</p>
+        </li>
+        <li>
+          <h3>Desarrollo web</h3>
+          <p>Sitios a medida, diseñados y construidos por mí de principio a fin.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <h2>Hablemos de tu proyecto</h2>
+      <a class="contacto-email" href="mailto:osorioemanuel1810@gmail.com">osorioemanuel1810@gmail.com</a>
+      <ul class="social-list">
+        <li><a href="https://www.behance.net/emanuelosorio2">Behance</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>emaoso</span>
+  <span>Cali, Colombia</span>
+  <span id="year"></span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
