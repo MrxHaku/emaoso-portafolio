@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabajo — emaoso</title>
+  <meta name="description" content="Carpetas de proyectos de emaoso: diseño, web y producto.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/glass-folder.css" />
+  <style>
+    .desk {
+      position: relative;
+      min-height: 100svh;
+      padding: 7rem 1.5rem 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .desk::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(color-mix(in srgb, var(--paper) 18%, transparent) 1.1px, transparent 1.4px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .intro {
+      position: relative;
+      max-width: 36rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .intro h1 {
+      font-family: var(--display);
+      font-size: clamp(1.75rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+      color: var(--paper);
+    }
+    .intro p {
+      margin: 0;
+      color: color-mix(in srgb, var(--paper) 72%, transparent);
+      line-height: 1.55;
+    }
+    .row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem 2.5rem;
+      justify-items: center;
+      align-items: end;
+      max-width: 1180px;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .row { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .row { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .hint {
+      position: relative;
+      margin-top: 3rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--paper) 55%, transparent);
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#principal">Saltar al contenido</a>
+
+<header class="chrome-top">
+  <a class="brand" href="index.html" aria-label="emaoso, inicio">
+    <img src="assets/emaoso-mark.png" alt="" class="brand-mark">
+    <span>emaoso</span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuOverlay" aria-label="Abrir menú">
+    <span class="bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="menu-backdrop"></div>
+  <div class="menu-panel">
+    <div class="menu-panel-head">
+      <span>emaoso</span>
+      <button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav class="menu-nav">
+      <a href="index.html"><span class="num">01</span> Inicio</a>
+      <a href="work.html"><span class="num">02</span> Trabajo</a>
+      <a href="index.html#sobre-mi"><span class="num">03</span> Sobre mí</a>
+      <a href="index.html#servicios"><span class="num">04</span> Servicios</a>
+      <a href="index.html#contacto"><span class="num">05</span> Contacto</a>
+    </nav>
+    <div class="menu-panel-foot">
+      <a href="mailto:osorioemanuel1810@gmail.com">Email</a>
+      <a href="https://www.behance.net/emanuelosorio2">Behance</a>
+    </div>
+  </div>
+</div>
+
+<main id="principal">
+  <div class="desk">
+    <div class="intro">
+      <h1>Carpetas de proyectos</h1>
+      <p>
+        Click en la carpeta para abrir · Luego click en una ficha para ir al proyecto.
+      </p>
+    </div>
+
+    <div class="row">
+      <div id="folder-diseno"></div>
+      <div id="folder-web"></div>
+      <div id="folder-producto"></div>
+    </div>
+
+    <p class="hint">Categorías de trabajo</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span>emaoso</span>
+  <span>Cali, Colombia</span>
+  <span id="year"></span>
+</footer>
+
+<!-- 1) Librería primero -->
+<script src="js/main.js"></script>
+<script src="js/glass-folder.js"></script>
+<!-- 2) Luego montas las carpetas AQUÍ (no dentro de glass-folder.js) -->
+<script>
+  GlassFolder.mount("#folder-diseno", {
+    label: "Diseño",
+    meta: "Marca & visual",
+    art: "aurora",
+    width: 280,
+    action: "none",
+    labelPlacement: "bottom-left",
+    files: [
+      {
+        name: "Yawa — Mupis",
+        meta: "Propuesta de diseño",
+        art: "verdant",
+        href: "proyectos/yawa.html",
+      },
+      {
+        name: "La Agencia UAO",
+        meta: "Gráfica · 2025",
+        art: "dusk",
+        href: "proyectos/agencia-uao.html",
+      },
+      {
+        name: "Identidad INZOKA",
+        meta: "Sistema visual",
+        art: "ember",
+        href: "proyectos/inzoka.html",
+      },
+      {
+        name: "Portfolio 2026",
+        meta: "Libro 3D",
+        art: "aurora",
+        href: "proyectos/portfolio-2026.html",
+      },
+    ],
+  });
+
+  GlassFolder.mount("#folder-web", {
+    label: "Web",
+    meta: "Sitios & paneles",
+    art: "glacier",
+    width: 280,
+    action: "none",
+    labelPlacement: "bottom-left",
+    files: [
+      {
+        name: "Iglesia del Nazareno",
+        meta: "Renovación web",
+        art: "aurora",
+        // Página interna del case study + el sitio en vivo está enlazado ahí
+        href: "proyectos/nazareno.html",
+      },
+      {
+        name: "RedCREA — UNICAMACHO",
+        meta: "Renovación web",
+        art: "glacier",
+        href: "proyectos/redcrea.html",
+      },
+      {
+        name: "Panel Ruta Creativa",
+        meta: "Panel de control",
+        art: "dusk",
+        href: "proyectos/ruta-creativa.html",
+      },
+    ],
+  });
+
+  GlassFolder.mount("#folder-producto", {
+    label: "Producto",
+    meta: "Apps & 3D",
+    tone: "dark",
+    art: "ember",
+    width: 280,
+    action: "none",
+    labelPlacement: "bottom-left",
+    files: [
+      {
+        name: "miEco",
+        meta: "App finanzas",
+        art: "ember",
+        href: "proyectos/mieco.html",
+      },
+      {
+        name: "Stills & Grade",
+        meta: "Motion · 3D",
+        art: "verdant",
+        href: "proyectos/stills.html",
+      },
+    ],
+  });
+</script>
+</body>
+</html>

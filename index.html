@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>emaoso — Emanuel Osorio, diseño visual &amp; dirección creativa</title>
+<title>emaoso</title>
 <meta name="description" content="Portafolio de Emanuel Osorio (emaoso): diseño visual, dirección creativa, UI/UX y desarrollo web desde Cali, Colombia.">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +18,35 @@
 <div class="row-preview" id="rowPreview" aria-hidden="true"><span id="rowPreviewLabel">Ver</span></div>
 
 <header class="chrome-top">
-  <a class="brand" href="#top" aria-label="emaoso, inicio">
+  <a class="brand" href="index.html" aria-label="emaoso, inicio">
     <img src="assets/emaoso-mark.png" alt="" class="brand-mark">
     <span>emaoso</span>
   </a>
-
-  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
-    <span></span><span></span><span></span>
-    <span class="sr-only">Abrir menú</span>
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuOverlay" aria-label="Abrir menú">
+    <span class="bars" aria-hidden="true"></span>
   </button>
-
-  <nav class="site-nav" id="siteNav">
-    <a href="#trabajo">Trabajo<sup>01</sup></a>
-    <a href="#sobre-mi">Sobre mí<sup>02</sup></a>
-    <a href="#servicios">Servicios<sup>03</sup></a>
-    <a href="#contacto">Contacto<sup>04</sup></a>
-  </nav>
 </header>
+
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="menu-backdrop"></div>
+  <div class="menu-panel">
+    <div class="menu-panel-head">
+      <span>emaoso</span>
+      <button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav class="menu-nav">
+      <a href="index.html"><span class="num">01</span> Inicio</a>
+      <a href="work.html"><span class="num">02</span> Trabajo</a>
+      <a href="index.html#sobre-mi"><span class="num">03</span> Sobre mí</a>
+      <a href="index.html#servicios"><span class="num">04</span> Servicios</a>
+      <a href="index.html#contacto"><span class="num">05</span> Contacto</a>
+    </nav>
+    <div class="menu-panel-foot">
+      <a href="mailto:osorioemanuel1810@gmail.com">Email</a>
+      <a href="https://www.behance.net/emanuelosorio2">Behance</a>
+    </div>
+  </div>
+</div>
 
 <main id="principal">
 
@@ -43,13 +55,11 @@
       <span class="word">Ema</span>
       <span class="word accent">Oso</span>
     </h1>
-
     <p class="hero-copy">
-      Soy Emanuel Osorio. Diseñador visual y director creativo del área
-      creativa de la Iglesia del Nazareno Cali. También diseño y desarrollo
+      Soy Emanuel Osorio. Diseñador visual y director creativo
+      de la Iglesia del Nazareno Cali. También diseño y desarrollo
       sitios web por mi cuenta.
     </p>
-
     <div class="chrome-bottom">
       <p class="clock">
         <span>Hora local — Cali</span>
@@ -79,7 +89,6 @@
         <li><button class="filtro-btn" data-filtro="producto">Producto</button></li>
       </ul>
     </div>
-
     <ul class="trabajo-list wrap" id="trabajoList">
       <li class="trabajo-row" data-cat="web" data-color="#d4860f">
         <span class="row-index">01</span>
@@ -87,16 +96,10 @@
         <span class="row-cat">Web</span>
         <span class="row-year">2026</span>
       </li>
-      <li class="trabajo-row" data-cat="producto" data-color="#7c5cff">
+      <li class="trabajo-row" data-cat="presentaciones" data-color="#7c5cff">
         <span class="row-index">02</span>
-        <span class="row-title">Iglesia del Nazareno Cali — Panel Ruta Creativa</span>
-        <span class="row-cat">Producto</span>
-        <span class="row-year">2026</span>
-      </li>
-      <li class="trabajo-row" data-cat="web" data-color="#2fae6e">
-        <span class="row-index">03</span>
-        <span class="row-title">RedCREA — UNICAMACHO</span>
-        <span class="row-cat">Web</span>
+        <span class="row-title">Iglesia del Nazareno Cali — Diseño de Presentaciones</span>
+        <span class="row-cat">Presentaciones</span>
         <span class="row-year">2026</span>
       </li>
       <li class="trabajo-row" data-cat="producto" data-color="#d4860f">
@@ -105,19 +108,22 @@
         <span class="row-cat">Producto</span>
         <span class="row-year">2026</span>
       </li>
-      <li class="trabajo-row" data-cat="marca" data-color="#e23d3d">
-        <span class="row-index">05</span>
-        <span class="row-title">Yawa — Festival de Diseño del Pacífico</span>
-        <span class="row-cat">Marca</span>
-        <span class="row-year">2024</span>
-      </li>
       <li class="trabajo-row" data-cat="marca" data-color="#2d6fd4">
         <span class="row-index">06</span>
         <span class="row-title">La Agencia UAO — Diseño gráfico</span>
         <span class="row-cat">Marca</span>
         <span class="row-year">2025</span>
       </li>
+      <li class="trabajo-row" data-cat="marca" data-color="#e23d3d">
+        <span class="row-index">05</span>
+        <span class="row-title">Yawa — Propuesta de Mupis</span>
+        <span class="row-cat">Marca</span>
+        <span class="row-year">2024</span>
+      </li>
     </ul>
+    <div class="wrap" style="margin-top:2.5rem">
+      <a class="btn-work" href="work.html">Ver carpetas de proyectos →</a>
+    </div>
   </section>
 
   <section class="sobre-mi" id="sobre-mi">
