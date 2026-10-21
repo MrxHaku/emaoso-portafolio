@@ -10,54 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-<style>
-  .project-hero{
-    padding:8rem 1.5rem 3rem;
-    max-width:var(--maxw);margin:0 auto;
-  }
-  .project-meta{
-    display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;
-    font-size:.85rem;opacity:.7;margin-bottom:1.25rem;
-  }
-  .project-meta span{font-family:ui-monospace,monospace;letter-spacing:.04em;}
-  .project-hero h1{
-    font-size:clamp(1.8rem,4.5vw,3rem);
-    letter-spacing:-0.03em;max-width:18ch;margin-bottom:1rem;
-  }
-  .project-summary{
-    font-size:1.1rem;max-width:52ch;
-    color:color-mix(in srgb, var(--paper) 78%, transparent);
-  }
-  .project-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem;}
-  .project-tags span{
-    border:1px solid var(--line);padding:.35em .85em;border-radius:999px;font-size:.8rem;
-  }
-  .project-body{
-    max-width:var(--maxw);margin:0 auto;padding:2rem 1.5rem 5rem;
-  }
-  .project-body .placeholder{
-    border:1px dashed var(--line);border-radius:.5rem;
-    min-height:280px;display:flex;align-items:center;justify-content:center;
-    color:color-mix(in srgb, var(--paper) 45%, transparent);
-    font-size:.9rem;text-align:center;padding:2rem;
-  }
-  .project-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;}
-  .project-actions a{
-    display:inline-block;padding:.7em 1.2em;border-radius:999px;
-    text-decoration:none;font-size:.9rem;font-weight:600;
-    border:1px solid var(--line);transition:border-color .2s,color .2s,background .2s;
-  }
-  .project-actions a.primary{
-    background:var(--orange);color:var(--ink);border-color:var(--orange);
-  }
-  .project-actions a:hover{border-color:var(--orange);color:var(--orange);}
-  .project-actions a.primary:hover{opacity:.9;color:var(--ink);}
-  .back-link{
-    display:inline-block;margin-bottom:1.5rem;font-size:.85rem;
-    text-decoration:none;opacity:.65;
-  }
-  .back-link:hover{opacity:1;}
-</style>
 </head>
 <body>
 
@@ -94,31 +46,23 @@
   </div>
 </div>
 
-<main id="principal">
-  <article class="project-hero">
+<main id="principal" class="desk">
+  <article class="case">
     <a class="back-link" href="../work.html">← Carpetas de proyectos</a>
-    <div class="project-meta">
-      <span>Marca</span>
-      <span>2024</span>
-    </div>
+    <p class="kicker">Marca · 2024</p>
     <h1>Yawa — Propuesta de Mupis</h1>
-    <p class="project-summary">Propuesta de diseño para mupis del festival Yawa — Centro de Ciencias, Arte y Tecnología.</p>
-    <div class="project-tags">
-      <span>Marca</span><span>Outdoor</span><span>Festival</span>
-    </div>
-    <div class="project-actions">
-      
-      <a href="../work.html">Volver a trabajo</a>
+    <p class="lede">Propuesta de diseño para mupis del festival Yawa — Centro de Ciencias, Arte y Tecnología.</p>
+    <ul class="project-tags">
+      <li>Marca</li>
+      <li>Outdoor</li>
+      <li>Festival</li>
+    </ul>
+    
+    <div class="sheet case-sheet">
+      <div class="faux-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p>Espacio para capturas, mockups o el caso de estudio.</p>
     </div>
   </article>
-
-  <div class="project-body">
-    <!-- Personaliza esta zona: imágenes, proceso, resultado -->
-    <div class="placeholder">
-      Espacio para capturas, mockups o el caso de estudio de<br>
-      <strong style="color:var(--paper);opacity:.85">Yawa — Propuesta de Mupis</strong>
-    </div>
-  </div>
 </main>
 
 <footer class="site-footer">

@@ -1,4 +1,4 @@
-// Overlay menu (mijobello-style)
+// Overlay menu
 const menuToggle = document.getElementById('menuToggle');
 const menuOverlay = document.getElementById('menuOverlay');
 const menuClose = document.getElementById('menuClose');
@@ -49,56 +49,6 @@ if (clockEl) {
   setInterval(tickClock, 30000);
 }
 
-// Work list category filter
-const filtros = document.getElementById('filtros');
-const rows = document.querySelectorAll('#trabajoList .trabajo-row');
-if (filtros && rows.length) {
-  filtros.addEventListener('click', (e) => {
-    const btn = e.target.closest('.filtro-btn');
-    if (!btn) return;
-    filtros.querySelectorAll('.filtro-btn').forEach((b) => b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-    const filtro = btn.dataset.filtro;
-    rows.forEach((row) => {
-      row.hidden = !(filtro === 'todo' || row.dataset.cat === filtro);
-    });
-  });
-}
-
 // Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// Custom cursor + project row preview
-const prefersStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const canHover = window.matchMedia('(hover: hover)').matches;
-const cursor = document.getElementById('cursorDot');
-const preview = document.getElementById('rowPreview');
-
-if (!prefersStill && canHover && cursor) {
-  const previewLabel = document.getElementById('rowPreviewLabel');
-  window.addEventListener('pointermove', (e) => {
-    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    if (preview) {
-      const vis = preview.classList.contains('is-visible') ? 1 : 0;
-      preview.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) scale(${vis})`;
-    }
-  });
-  document.querySelectorAll('a, button, .trabajo-row').forEach((el) => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('is-big'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('is-big'));
-  });
-  if (preview && rows.length) {
-    rows.forEach((row) => {
-      row.addEventListener('mouseenter', () => {
-        preview.style.background = row.dataset.color;
-        if (previewLabel) previewLabel.textContent = row.dataset.cat === 'web' ? 'Visitar' : 'Ver';
-        preview.classList.add('is-visible');
-      });
-      row.addEventListener('mouseleave', () => preview.classList.remove('is-visible'));
-    });
-  }
-} else {
-  if (cursor) cursor.style.display = 'none';
-  if (preview) preview.style.display = 'none';
-}
